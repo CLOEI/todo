@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <title>Todo</title>
+</head>
+<body>
+    <header>
+        <h1>\\Todo</h1>
+        <div class="toggle-menu">
+            <div class="menu-bar"></div>
+        </div>
+    </header>
+    <main>
+        <nav class="extended-menu hidden">
+            <p class="menu-home active">Home</p>
+            <p class="menu-today">Today</p>
+            <p class="menu-week">This week</p>
+            <h2>Projects</h2>
+            <ul>
+            </ul>
+            <p class="menu-add-project">+ Add Project</p>
+        </nav>
+        <div class="project-container">
+        </div>
+    </main>
+    <div class="todo-form-container hidden">
+        <form class="todo-form">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description">
+            <label for="duedate">Due-date</label>
+            <input type="datetime-local" name="duedate" id="duedate">
+            <label for="priority">Priority</label>
+            <input type="range" min="1" max="5" value="1" name="priority" id="priority">
+            <button type="button">Close</button>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
