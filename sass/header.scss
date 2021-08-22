@@ -1,0 +1,48 @@
+$background-color: #d0b49f;
+$background-color2: #f1e7dd;
+$text-color: #f6f2f0;
+
+header{
+    display: flex;
+    height: 60px;
+    background-color: $background-color;
+    color: $text-color;
+    align-items: center;
+    h1{
+        margin-left: 0.5rem;
+    }
+    .toggle-menu{
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        margin: 0 0.5rem 0 auto;
+        cursor: pointer;
+        .menu-bar{
+            position: absolute;
+            width: 2rem;
+            height: 0.4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 1px;
+            background-color: $background-color2;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 2rem;
+                height: 0.4rem;
+                transform: translateY(-150%);
+                background-color: $background-color2;
+                border-radius: 1px;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 2rem;
+                height: 0.4rem;
+                transform: translateY(150%);
+                background-color: $background-color2;
+                border-radius: 1px;
+            }
+        }
+    }
+}

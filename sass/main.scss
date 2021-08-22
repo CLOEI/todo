@@ -1,0 +1,141 @@
+$background-color3: #e7d1c9;
+$background-color4: #f3e7e4;
+$text-color: #011627;
+
+main{
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+    .extended-menu{
+        background-color: $background-color3;
+        width: 100%;
+        p{
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            margin: 0 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            &:hover{
+                background-color: $background-color4;
+            }
+        }
+        p:nth-child(1){
+            margin-top: 0.5rem;
+        }
+        p:nth-last-child(1){
+            margin-bottom: 0.5rem;
+        }
+        h2{
+            margin: 1rem 0 1rem 1rem;
+        }
+        ul{
+            list-style-type: none;
+            li{
+                display: flex;
+                padding: 0.5rem;
+                margin: 0 1rem;
+                border-radius: 4px;
+                cursor: pointer;
+                &:hover{
+                    background-color: $background-color4;
+                    svg{
+                        display: block;
+                    }
+                }
+                svg{
+                    display: hidden;
+                    margin-left: auto;
+                    transform: translateY(15%);
+                }
+            }
+            form{
+                margin: 0 1rem;
+                input[type="text"] {
+                    display: block;
+                    width: 100%;
+                    max-width: 10rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+    .project-container{
+        h3{
+            margin: 1rem 0.5rem
+        }
+        .todo-container{
+            width: 90%;
+            margin: 0 auto 0.5rem auto;
+            display: flex;
+            .todo{
+                width: 100%;
+                background-color: $background-color3;
+                word-break: break-all;
+                .todo-title{
+                    font-size: 20px;
+                }
+                .todo-desc{
+                    background-color: $background-color4;
+                    max-height: 18px;
+                    overflow-y: hidden;
+                    &:hover{
+                        max-height: max-content;
+                        overflow-y: visible;
+                    }
+                }
+            }
+            .todo-option{
+                display: none;
+                align-items: center;
+                justify-content: center;
+                width: 3rem;
+                background-color: $background-color3;
+                cursor: pointer;
+            }
+            &:hover .todo-option{
+                display: grid;
+            }
+        }
+        .add-todo-container{
+            position: relative;
+            width: 95%;
+            margin: 1rem auto;
+            height: 2rem;
+            background-color: $background-color3;
+            cursor: pointer;
+            .add-todo-bar{
+                position: absolute;
+                width: 0.5rem;
+                height: 1.5rem;
+                background-color: $background-color4;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 0.5rem;
+                    height: 1.5rem;
+                    background-color: $background-color4;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(min-width:768px) {
+    main{
+        display: flex;
+        flex-direction: row;
+        height: calc(100vh - 60px);
+        .extended-menu{
+            width: 25vw;
+            overflow-y: auto;
+        }
+        .project-container{
+            width: 100%;
+            overflow-y: auto;
+        }
+    }
+}

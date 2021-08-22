@@ -1,0 +1,33 @@
+$background-color: #d0b49f;
+$background-color2: #f1e7dd;
+$text-color: #011627;
+
+.todo-form-container{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(3px);
+    .todo-form{
+        display:grid;
+        justify-content: center;
+        grid-gap:5px;
+        width: 90%;
+        max-width: 300px;
+        background-color: $background-color;
+        padding: 1rem 0;
+        border-radius: 2px;
+        input{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and(min-width:768px) {
+    .todo-form-container .todo-form{
+        grid-template-columns: max-content max-content;
+    }
+}
